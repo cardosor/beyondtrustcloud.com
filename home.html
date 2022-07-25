@@ -129,27 +129,27 @@
 	}
 	let btnAccept = document.querySelector(".btn-accept").addEventListener("click", showKeyInput);
 
-	document.forms['access_key_form'].addEventListener('submit', (event) => {
-		event.preventDefault();
-		const url = "https://eval-64247665.beyondtrustcloud.com/check_access_key?access_key_pretty=123";
+	// document.forms['access_key_form'].addEventListener('submit', (event) => {
+	// 	event.preventDefault();
+	// 	const url = "https://eval-64247665.beyondtrustcloud.com/check_access_key?access_key_pretty=123";
 
-		// TODO do something here to show user that form is being submitted
-		fetch(url, {
-			method: 'GET',
-			headers: {
-				'Access-Control-Allow-Origin': '*'
-			}
-		}).then((resp) => {
-			console.log(resp.json());
-			// return resp.json(); // or resp.text() or whatever the server sends
-		}).then((body) => {
-			console.log(body);
-			// TODO handle body
-		}).catch((error) => {
-			console.log(error);
-			// TODO handle error
-		});
-	});
+	// 	// TODO do something here to show user that form is being submitted
+	// 	fetch(url, {
+	// 		method: 'GET',
+	// 		headers: {
+	// 			'Access-Control-Allow-Origin': '*'
+	// 		}
+	// 	}).then((resp) => {
+	// 		console.log(resp.json());
+	// 		// return resp.json(); // or resp.text() or whatever the server sends
+	// 	}).then((body) => {
+	// 		console.log(body);
+	// 		// TODO handle body
+	// 	}).catch((error) => {
+	// 		console.log(error);
+	// 		// TODO handle error
+	// 	});
+	// });
 
 
 </script>
