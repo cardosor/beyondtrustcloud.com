@@ -135,7 +135,10 @@
 
 		// TODO do something here to show user that form is being submitted
 		fetch(url, {
-			method: 'GET'
+			method: 'GET',
+			headers: {
+				'Access-Control-Allow-Origin': '*'
+			}
 		}).then((resp) => {
 			console.log(resp.json());
 			// return resp.json(); // or resp.text() or whatever the server sends
