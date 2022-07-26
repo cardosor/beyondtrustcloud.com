@@ -1,6 +1,7 @@
 /* COMMON CSS */
 
 /***************************************************************** ELEMENTS */
+html, body { margin:0; padding:0 }
 
 body {
 	color: #505153;
@@ -8,8 +9,6 @@ body {
 	font-size: 12px;
 	text-align: center;
 	background-color: #ffffff;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 a {
@@ -89,13 +88,6 @@ pre {
 img,
 a img {
 	border-width: 0;
-}
-
-div#container,
-.container {
-	width: 60em;
-	margin: 0 auto;
-	text-align: left;
 }
 
 table {
@@ -376,9 +368,7 @@ div.submenu ul li.selected a:hover {
 	/* position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 50%); */
-
-	/* display: none; */
+	transform: translate(0, -100%); */
 }
 
 /* IE[456] doesn't understand the '>' child selector
@@ -402,6 +392,7 @@ We hide this from IE[456] because it really screws up page layout when you set a
 	text-decoration: none;
 	font-weight: 900;
 	font-size: 1.2em;
+	/* transform: translate(240px, 0px); */
 }
 
 .contentBox h2 {
@@ -546,7 +537,18 @@ form.tableless span select {
 
 body {
 	position: relative;
+	/* background-image: url("files/2882wide.png"); */
+	/* background-position:fixed; */
+	/* background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	back */
+	/* background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block !important; */
 }
+
 
 #header .pageTitle {
 	text-align: left;
@@ -596,7 +598,7 @@ body {
 }
 
 .sectionTitle span {
-	float: center;
+	float: none;
 	display: block;
 	font-size: 1.5rem;
 }
@@ -747,21 +749,43 @@ ul.ambushMessageList > li:last-of-type {
 	width: 85%;
 }
 
-.parent-container{
+
+
+.container{
 	display: flex;
-	height: 50vh;
-}
-
-
-.navbar{
-	height: 105px;
+	flex-direction:row;
+	align-items: center;
+	justify-content:center;
+	width: 100%;
+	/* height: 105px; */
+	margin: 0;
 	border-bottom: solid #6CB86A;
 	background-color:  rgba(255, 255, 255);
+
 }
+
+.navbar-nav{
+	display: flex;
+	flex-direction:row;
+	align-items: center;
+	min-width: 400px;
+	width: 500px;
+	justify-content:space-around;
+}
+.container ul li{
+	list-style-type: none;
+	font-size: 20px;
+}
+.container ul li a{
+	color: black;
+}
+
+
 
 #logoIRobot{
 	width: 200px;
 	height: 88px;
+	background-image: url("/files/logo.gif");
 }
 
 
@@ -785,12 +809,27 @@ ul.ambushMessageList > li:last-of-type {
 	margin-right: 10px;
 }
 
+.spacer{
+	width: auto;
+	height: 100px;
+}
+
 #container{
-	display: none;
-	position: absolute;
+	/* position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 50%);
+	transform: translate(-50%, 50%); */
+
+	width: 100% !important;
+	height: 93vh !important;
+	background-image: url("/files/home.jpg");
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: row;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 
@@ -828,11 +867,6 @@ ul.ambushMessageList > li:last-of-type {
 		height: 80%;
 	}
 
-	div#container {
-		width: 100%;
-		margin: 0;
-	}
-
 	.contentBox {
 		margin: 0;
 		margin-bottom: 8px;
@@ -856,6 +890,7 @@ ul.ambushMessageList > li:last-of-type {
 		margin: -24px -12px 12px -12px;
 		margin-bottom: 6px;
 		padding: 4px 6px;
+		
 	}
 
 	form.tableless label {
@@ -1000,3 +1035,7 @@ ul.section-start-buttons {
 	margin: 16px auto;
 	width: 160px;
 }
+
+
+
+
